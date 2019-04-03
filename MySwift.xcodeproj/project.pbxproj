@@ -223,7 +223,6 @@
 				6BA2296634BFA441964B8D15 /* Pods-MySwift.debug.xcconfig */,
 				916E6FB4064C3C4F6F888DA8 /* Pods-MySwift.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -586,7 +585,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hechuan.org.cn.MySwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -606,7 +605,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hechuan.org.cn.MySwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

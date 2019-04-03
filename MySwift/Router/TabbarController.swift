@@ -33,7 +33,7 @@ class TabbarController: UITabBarController {
         childVC.title = childTitle
         childVC.tabBarItem.image = UIImage.init(named: imageName)?.withRenderingMode(.alwaysOriginal)
         childVC.tabBarItem.selectedImage = UIImage.init(named: selectImageName)?.withRenderingMode(.alwaysOriginal)
-        self.addChild(navcontroller)
+        self.addChildViewController(navcontroller)
         
         
     }

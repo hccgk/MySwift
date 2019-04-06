@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C5EAFDF3FB92D0DAB3859EC /* libPods-MySwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 783C3AA5CA2CBDF69EB61C21 /* libPods-MySwift.a */; };
 		0E71D0602252C97A008C24B9 /* HomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71D05F2252C97A008C24B9 /* HomeTableCell.swift */; };
 		0EE40973224DA8A10057012A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE40972224DA8A10057012A /* AppDelegate.swift */; };
 		0EE40978224DA8A10057012A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EE40976224DA8A10057012A /* Main.storyboard */; };
@@ -21,7 +22,6 @@
 		0EE409B2224DAD7D0057012A /* CenterRightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE409B1224DAD7D0057012A /* CenterRightViewController.swift */; };
 		0EE409B4224DC2E90057012A /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE409B3224DC2E90057012A /* NextViewController.swift */; };
 		0EE409B7224DCC030057012A /* pchconfigfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE409B6224DCC030057012A /* pchconfigfile.swift */; };
-		75575E338C9A60961120761C /* libPods-MySwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39734024EC99F4759C120D2B /* libPods-MySwift.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +62,8 @@
 		0EE409B1224DAD7D0057012A /* CenterRightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterRightViewController.swift; sourceTree = "<group>"; };
 		0EE409B3224DC2E90057012A /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		0EE409B6224DCC030057012A /* pchconfigfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pchconfigfile.swift; sourceTree = "<group>"; };
-		39734024EC99F4759C120D2B /* libPods-MySwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MySwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BA2296634BFA441964B8D15 /* Pods-MySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySwift.debug.xcconfig"; path = "Target Support Files/Pods-MySwift/Pods-MySwift.debug.xcconfig"; sourceTree = "<group>"; };
+		783C3AA5CA2CBDF69EB61C21 /* libPods-MySwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MySwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		916E6FB4064C3C4F6F888DA8 /* Pods-MySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySwift.release.xcconfig"; path = "Target Support Files/Pods-MySwift/Pods-MySwift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75575E338C9A60961120761C /* libPods-MySwift.a in Frameworks */,
+				0C5EAFDF3FB92D0DAB3859EC /* libPods-MySwift.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +229,7 @@
 		39B18E45A7AADAE8E2491F97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				39734024EC99F4759C120D2B /* libPods-MySwift.a */,
+				783C3AA5CA2CBDF69EB61C21 /* libPods-MySwift.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -585,8 +585,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hechuan.org.cn.MySwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Pods";
 			};
 			name = Debug;
 		};
@@ -605,8 +606,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hechuan.org.cn.MySwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Pods";
 			};
 			name = Release;
 		};

@@ -1,4 +1,4 @@
-#source 'https://github.com/CocoaPods/Specs.git'
+#source 'https://github.com/ /Specs.git'
 
 platform :ios,'9.0'
 
@@ -21,7 +21,7 @@ target 'MySwift' do
 #frameworks	use_frameworks!
 pod 'SnapKit'
 pod 'Alamofire'
-pod 'ObjectMapper'
+#pod 'ObjectMapper'
 pod 'Moya'
 pod 'Moya/RxSwift'
 pod 'Kingfisher'

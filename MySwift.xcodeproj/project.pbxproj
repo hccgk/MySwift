@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0C5EAFDF3FB92D0DAB3859EC /* libPods-MySwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 783C3AA5CA2CBDF69EB61C21 /* libPods-MySwift.a */; };
+		0E64D4D722840A550033AA16 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64D4D622840A550033AA16 /* Extensions.swift */; };
+		0E64D4DC22840BA80033AA16 /* homeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64D4DB22840BA80033AA16 /* homeModel.swift */; };
+		0E64D4E02284122C0033AA16 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64D4DF2284122C0033AA16 /* HomeViewModel.swift */; };
 		0E71D0602252C97A008C24B9 /* HomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71D05F2252C97A008C24B9 /* HomeTableCell.swift */; };
 		0EE40973224DA8A10057012A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE40972224DA8A10057012A /* AppDelegate.swift */; };
 		0EE40978224DA8A10057012A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EE40976224DA8A10057012A /* Main.storyboard */; };
@@ -42,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E64D4D622840A550033AA16 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0E64D4DB22840BA80033AA16 /* homeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeModel.swift; sourceTree = "<group>"; };
+		0E64D4DF2284122C0033AA16 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		0E71D05F2252C97A008C24B9 /* HomeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableCell.swift; sourceTree = "<group>"; };
 		0EE4096F224DA8A10057012A /* MySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EE40972224DA8A10057012A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,19 +99,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E64D4D32284078F0033AA16 /* Comons */ = {
+			isa = PBXGroup;
+			children = (
+				0E64D4D622840A550033AA16 /* Extensions.swift */,
+			);
+			path = Comons;
+			sourceTree = "<group>";
+		};
+		0E64D4DA22840BA80033AA16 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				0E64D4DB22840BA80033AA16 /* homeModel.swift */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		0E64D4DD22840BB10033AA16 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				0E64D4DF2284122C0033AA16 /* HomeViewModel.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		0E64D4DE22840BBB0033AA16 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				0EE409AD224DAD660057012A /* HomeViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		0E71D05D224F5A4C008C24B9 /* V */ = {
 			isa = PBXGroup;
 			children = (
 				0E71D05F2252C97A008C24B9 /* HomeTableCell.swift */,
 			);
 			path = V;
-			sourceTree = "<group>";
-		};
-		0E71D05E224F5A54008C24B9 /* M */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = M;
 			sourceTree = "<group>";
 		};
 		0EE40966224DA8A10057012A = {
@@ -134,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				0EE40972224DA8A10057012A /* AppDelegate.swift */,
+				0E64D4D32284078F0033AA16 /* Comons */,
 				0EE409B5224DCBED0057012A /* Config */,
 				0EE409A8224DAAA70057012A /* Router */,
 				0EE409A5224DA9F20057012A /* Home */,
@@ -177,8 +209,9 @@
 		0EE409A5224DA9F20057012A /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				0EE409AD224DAD660057012A /* HomeViewController.swift */,
-				0E71D05E224F5A54008C24B9 /* M */,
+				0E64D4DE22840BBB0033AA16 /* VC */,
+				0E64D4DD22840BB10033AA16 /* VM */,
+				0E64D4DA22840BA80033AA16 /* M */,
 				0E71D05D224F5A4C008C24B9 /* V */,
 			);
 			path = Home;
@@ -398,8 +431,11 @@
 				0EE409B2224DAD7D0057012A /* CenterRightViewController.swift in Sources */,
 				0EE409B0224DAD730057012A /* CenterLeftViewController.swift in Sources */,
 				0EE40973224DA8A10057012A /* AppDelegate.swift in Sources */,
+				0E64D4E02284122C0033AA16 /* HomeViewModel.swift in Sources */,
 				0EE409B7224DCC030057012A /* pchconfigfile.swift in Sources */,
+				0E64D4D722840A550033AA16 /* Extensions.swift in Sources */,
 				0E71D0602252C97A008C24B9 /* HomeTableCell.swift in Sources */,
+				0E64D4DC22840BA80033AA16 /* homeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,14 +614,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 733J239QST;
 				INFOPLIST_FILE = MySwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hechuan.org.cn.MySwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Pods";
 			};
@@ -599,14 +635,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 733J239QST;
 				INFOPLIST_FILE = MySwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hechuan.org.cn.MySwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Pods";
 			};

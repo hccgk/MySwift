@@ -21,7 +21,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
 
     private func loadData(){
-        viewmodel.requestJoker(size: 20, number: 1)
+        viewmodel.requestJoker(size: 10, number: 2)
         
     }
     

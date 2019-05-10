@@ -14,18 +14,37 @@ class contentModel: NSObject {
     @objc var hashId:    String?
     @objc var unixtime:    String?
     
+    init(dict:[String:Any]) {
+        super.init()
+        setValuesForKeys(dict)
+        
+    }
+    
 }
 
 
 class homeModel: NSObject {
     @objc var error_code: Int = 0
     @objc var reason:    String?
-    @objc var result: Array<[String:Any]>?
+    @objc var result: Array<contentModel>?
     
     init(dict:[String:Any]) {
         super.init()
         setValuesForKeys(dict)
         
+    }
+    override func setValue(_ value: Any?, forKey key: String) {
+        if key == "result" {
+            var mutarr = [contentModel]()
+            if let arrdict = value as? Array<[String:Any]> {
+                for dict in arrdict {
+                    let contentmodel = contentModel(dict: dict)
+                    mutarr.append(contentmodel)
+                }
+            }
+            result = mutarr
+            return
+        }
     }
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
         print("UndefinedKey \(key) \(value.debugDescription)")

@@ -1,32 +1,38 @@
 //
-//  homeModel.swift
+//  HomeModel.swift
 //  MySwift
 //
-//  Created by hechuan on 2019/5/9.
+//  Created by hechuan on 2019/5/16.
 //  Copyright © 2019 hechuan. All rights reserved.
-//
+
 
 import UIKit
 
-class contentModel: NSObject {
+public class MContentModel: NSObject {
     @objc var content:    String?
     @objc var updatetime:    String?
     @objc var hashId:    String?
     @objc var unixtime:    String?
     
-    init(dict:[String:Any]) {
-        super.init()
+   convenience init(dict:[String:Any]) {
+        self.init()
         setValuesForKeys(dict)
         
     }
+    public override init() {
+        super.init()
+    }
     
+    public override func setValue(_ value: Any?, forUndefinedKey key: String) {
+        print("UndefinedKey \(key) \(value.debugDescription)")
+    }
 }
 
 
-class homeModel: NSObject {
+class HomeModel: NSObject {
     @objc var error_code: Int = 0
     @objc var reason:    String?
-    @objc var result: Array<contentModel>?
+    @objc var result: Array<MContentModel>?
     
     init(dict:[String:Any]) {
         super.init()
@@ -35,10 +41,10 @@ class homeModel: NSObject {
     }
     override func setValue(_ value: Any?, forKey key: String) {
         if key == "result" {
-            var mutarr = [contentModel]()
+            var mutarr = [MContentModel]()
             if let arrdict = value as? Array<[String:Any]> {
                 for dict in arrdict {
-                    let contentmodel = contentModel(dict: dict)
+                    let contentmodel = MContentModel(dict: dict)
                     mutarr.append(contentmodel)
                 }
             }
@@ -48,8 +54,8 @@ class homeModel: NSObject {
     }
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
         print("UndefinedKey \(key) \(value.debugDescription)")
-
+        
     }
-  
+    
 }
 

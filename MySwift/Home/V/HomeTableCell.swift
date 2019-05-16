@@ -10,7 +10,8 @@ import UIKit
 
 class HomeTableCell: UITableViewCell {
      var titleLabelm : UILabel?
-
+    var model : MContentModel?
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupUI()
@@ -25,14 +26,19 @@ class HomeTableCell: UITableViewCell {
         titleLabelm = UILabel.init()
         self.contentView.addSubview(titleLabelm!)
         titleLabelm?.snp_makeConstraints({ (make) in
-            make.left.equalToSuperview()
+            make.left.equalToSuperview().offset(10)
             make.top.equalToSuperview().offset(10)
-            make.width.equalTo(99)
-            make.height.equalTo(30)
+            make.bottom.equalToSuperview().offset(-10)
+            make.right.equalToSuperview().offset(-10)
         })
         titleLabelm?.font = UIFont.systemFont(ofSize: 15)
         titleLabelm?.textColor = UIColor.red
         titleLabelm?.backgroundColor = UIColor.init(white: 0.9, alpha: 1)
+        titleLabelm?.numberOfLines = 0
+    }
+    func configModel(model: MContentModel)  {
+        titleLabelm?.text = model.content
+        
     }
     
     override func awakeFromNib() {

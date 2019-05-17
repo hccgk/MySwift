@@ -25,6 +25,7 @@
 		0EE409B2224DAD7D0057012A /* CenterRightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE409B1224DAD7D0057012A /* CenterRightViewController.swift */; };
 		0EE409B4224DC2E90057012A /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE409B3224DC2E90057012A /* NextViewController.swift */; };
 		0EE409B7224DCC030057012A /* pchconfigfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE409B6224DCC030057012A /* pchconfigfile.swift */; };
+		0EE64691228EAE3C000E5604 /* danceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE64690228EAE3C000E5604 /* danceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		0EE409B1224DAD7D0057012A /* CenterRightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterRightViewController.swift; sourceTree = "<group>"; };
 		0EE409B3224DC2E90057012A /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		0EE409B6224DCC030057012A /* pchconfigfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pchconfigfile.swift; sourceTree = "<group>"; };
+		0EE64690228EAE3C000E5604 /* danceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = danceView.swift; sourceTree = "<group>"; };
 		6BA2296634BFA441964B8D15 /* Pods-MySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySwift.debug.xcconfig"; path = "Target Support Files/Pods-MySwift/Pods-MySwift.debug.xcconfig"; sourceTree = "<group>"; };
 		783C3AA5CA2CBDF69EB61C21 /* libPods-MySwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MySwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		916E6FB4064C3C4F6F888DA8 /* Pods-MySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySwift.release.xcconfig"; path = "Target Support Files/Pods-MySwift/Pods-MySwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				0E64D4D622840A550033AA16 /* Extensions.swift */,
+				0EE64690228EAE3C000E5604 /* danceView.swift */,
 			);
 			path = Comons;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				0EE4096B224DA8A10057012A /* Sources */,
 				0EE4096C224DA8A10057012A /* Frameworks */,
 				0EE4096D224DA8A10057012A /* Resources */,
+				3A6259EC630BDC604CD6B2F9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -395,6 +399,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3A6259EC630BDC604CD6B2F9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MySwift/Pods-MySwift-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/PKHUD/PKHUDResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PKHUDResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MySwift/Pods-MySwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E57D330DBDE5D6F0D6509806 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -435,6 +461,7 @@
 				0E84CE6D228D44EF009AC7CB /* HomeModel.swift in Sources */,
 				0EE409B7224DCC030057012A /* pchconfigfile.swift in Sources */,
 				0E64D4D722840A550033AA16 /* Extensions.swift in Sources */,
+				0EE64691228EAE3C000E5604 /* danceView.swift in Sources */,
 				0E71D0602252C97A008C24B9 /* HomeTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

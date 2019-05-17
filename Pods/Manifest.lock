@@ -9,22 +9,25 @@ PODS:
   - Moya/RxSwift (13.0.0):
     - Moya/Core
     - RxSwift (~> 4.0)
+  - PKHUD (5.2.1)
   - Result (4.1.0)
   - RxSwift (4.5.0)
   - SnapKit (4.2.0)
 
 DEPENDENCIES:
-  - Alamofire
-  - Kingfisher
-  - Moya
+  - Alamofire (~> 4.8.2)
+  - Kingfisher (~> 4.10.1)
+  - Moya (~> 13.0.0)
   - Moya/RxSwift
-  - SnapKit
+  - PKHUD (~> 5.2.1)
+  - SnapKit (~> 4.2.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Kingfisher
     - Moya
+    - PKHUD
     - Result
     - RxSwift
     - SnapKit
@@ -33,10 +36,11 @@ SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   Moya: 161263550064ff8a4948e8ff63137fd72a876292
+  PKHUD: 4e6162c4c39ac367c6934e9855c6b4762ee16256
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: 108eaf985c2bb7cdbc23b8b9b1b5c566d05ffd0e
+PODFILE CHECKSUM: 95735365ee7ce6ef690b9225193148e5d1b4bd3f
 
 COCOAPODS: 1.6.1

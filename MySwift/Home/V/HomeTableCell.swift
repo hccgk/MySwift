@@ -22,7 +22,7 @@ class HomeTableCell: UITableViewCell {
     }
     
     func setupUI()  {
-        self.contentView.backgroundColor = UIColor.randomColor
+//        self.contentView.backgroundColor = UIColor.init(white: 0.95, alpha: 1)
         titleLabelm = UILabel.init()
         self.contentView.addSubview(titleLabelm!)
         titleLabelm?.snp_makeConstraints({ (make) in
@@ -32,8 +32,8 @@ class HomeTableCell: UITableViewCell {
             make.right.equalToSuperview().offset(-10)
         })
         titleLabelm?.font = UIFont.systemFont(ofSize: 15)
-        titleLabelm?.textColor = UIColor.red
-        titleLabelm?.backgroundColor = UIColor.init(white: 0.9, alpha: 1)
+        titleLabelm?.textColor = UIColor.randomColor
+//        titleLabelm?.backgroundColor = UIColor.init(white: 0.9, alpha: 1)
         titleLabelm?.numberOfLines = 0
     }
     func configModel(model: MContentModel)  {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PKHUD
 
 class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -23,12 +24,17 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
 
     private func loadData(){
+        let cview = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 100, height: 100))
+        cview.backgroundColor  = UIColor.red
+        PKHUD.sharedHUD.contentView = cview
+        PKHUD.sharedHUD.show()
         
-        homeData.requestJoker(size: 10, number: 1) { (state) in
+        homeData.requestJoker(size: 20, number: 1) { (state) in
             if state
             {
                 self.tableView?.reloadData()
             }
+            PKHUD.sharedHUD.hide(afterDelay: 1)
         }
        
         
@@ -62,7 +68,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         temptableview.dataSource = self
         temptableview.register(HomeTableCell.self, forCellReuseIdentifier: "testmyswifttableviewcellID")
         temptableview.estimatedRowHeight = 100
-        
+        temptableview.backgroundColor = UIColor.init(white: 0.95, alpha: 1)
         return temptableview
     }()
 }

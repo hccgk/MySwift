@@ -36,6 +36,7 @@ class CenterRightViewController: UIViewController {
        
         
     }
+   
     
     private func makeUI(){
         let btnNext = UIButton.init(frame: CGRect.init(x: 10, y: appnavHeight+10, width: 100, height: 44))

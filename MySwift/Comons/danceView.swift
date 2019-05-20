@@ -10,9 +10,9 @@ import UIKit
 import CoreGraphics
 
 class danceView: UIView {
-    private let circleL = CALayer.init()
-    private let circleM = CALayer.init()
-    private let circleR = CALayer.init()
+    private let circleL = CAShapeLayer.init()
+    private let circleM = CAShapeLayer.init()
+    private let circleR = CAShapeLayer.init()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,13 +37,62 @@ class danceView: UIView {
             //do add circle
             addCircle()
         }
-        
+        addAnimation()
         
     }
     
     private func addCircle(){
-        frame = CGRect.init(x: 0, y: 0, width: 160, height: 100)
-//        circleL.bounds
+        frame = CGRect.init(x: 0, y: 0, width: 250, height: 100)
+
+        
+        circleL.fillColor = UIColor.green.cgColor
+        self.layer .addSublayer(circleL)
+        let pathLC = UIBezierPath.init(arcCenter: CGPoint.init(x: 55, y: 50), radius: 15, startAngle: 0, endAngle: CGFloat( Double.pi*2.0), clockwise: true)
+        circleL.path = pathLC.cgPath
+        
+        
+        circleM.fillColor = UIColor.blue.cgColor
+        self.layer .addSublayer(circleM)
+        let pathMC = UIBezierPath.init(arcCenter: CGPoint.init(x: 55 + 70, y: 50), radius: 15, startAngle: 0, endAngle: CGFloat( Double.pi*2.0), clockwise: true)
+        circleM.path = pathMC.cgPath
+
+        
+        circleR.fillColor = UIColor.yellow.cgColor
+        self.layer .addSublayer(circleR)
+        let pathRC = UIBezierPath.init(arcCenter: CGPoint.init(x: 55 + 70*2, y: 50), radius: 15, startAngle: 0, endAngle: CGFloat( Double.pi*2.0), clockwise: true)
+        circleR.path = pathRC.cgPath
+        
+        
+    }
+    
+    private func addAnimation(){
+
+        let  value1 = NSValue.init(cgPoint: CGPoint.init(x: 0, y: CGFloat( circleL.position.y - 30.0)))
+        let  value3 = NSValue.init(cgPoint: CGPoint.init(x: 0, y: CGFloat( circleL.position.y + 30.0)))
+
+        let animation2 = CAKeyframeAnimation.init(keyPath: "position")
+        let animation3 = CAKeyframeAnimation.init(keyPath: "position")
+
+        animation2.values = [value1,value3]
+        animation3.values = [value3,value1]
+
+        animation2.duration = 0.4
+        animation2.repeatCount = MAXFLOAT
+        animation2.autoreverses = true
+        animation2.fillMode = .forwards
+        animation2.timingFunctions = [CAMediaTimingFunction(name: .easeInEaseOut)]
+
+        animation3.duration = 0.4
+        animation3.repeatCount = MAXFLOAT
+        animation3.autoreverses = true
+        animation3.fillMode = .forwards
+        animation3.timingFunctions = [CAMediaTimingFunction(name: .easeInEaseOut)]
+
+        circleL.add(animation2, forKey: "position")
+        circleM.add(animation3, forKey: "position")
+        circleR.add(animation2, forKey: "position")
+
+
     }
 
 }

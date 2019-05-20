@@ -24,8 +24,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
 
     private func loadData(){
-        let cview = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 100, height: 100))
-        cview.backgroundColor  = UIColor.red
+        let cview = danceView.init(frame: CGRect.zero)
         PKHUD.sharedHUD.contentView = cview
         PKHUD.sharedHUD.show()
         
@@ -34,7 +33,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             {
                 self.tableView?.reloadData()
             }
-            PKHUD.sharedHUD.hide(afterDelay: 1)
+            PKHUD.sharedHUD.hide(afterDelay: 3)
         }
        
         

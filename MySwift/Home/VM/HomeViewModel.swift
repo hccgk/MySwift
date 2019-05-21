@@ -35,7 +35,13 @@ class HomeViewModel: NSObject {
             case .success(let json):
                 let dict = json as! Dictionary<String,Any>
                 let hm = HomeModel(dict: dict)
-                self.viewmodel = hm
+                //判断当前页码，如果是非1页，add
+                if number > 1 {
+                    self.viewmodel?.result = self.viewmodel!.result! +  hm.result!
+                }else{
+                    self.viewmodel = hm
+
+                }
                 callBack(true)
             case .failure(_):
                 callBack(false)

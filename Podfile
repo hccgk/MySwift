@@ -19,11 +19,13 @@ platform :ios,'9.0'
 
 target 'MySwift' do
 #frameworks	use_frameworks!
-pod 'SnapKit', '~>4.2.0'
-pod 'Alamofire', '~> 4.8.2'
+pod 'SnapKit', '~>4.2.0' #布局
+pod 'Alamofire', '~> 4.8.2' #网络
 #pod 'ObjectMapper'
 pod 'Moya','~>13.0.0'
 pod 'Moya/RxSwift'
-pod 'Kingfisher', '~>4.10.1'
-pod 'PKHUD', '~> 5.2.1'
+pod 'Kingfisher', '~>4.10.1' #图像
+pod 'PKHUD', '~> 5.2.1' #hud
+use_frameworks!
+pod 'MJRefresh', '~> 3.1.16'
 end

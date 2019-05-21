@@ -14,7 +14,7 @@ class TabbarController: UITabBarController {
         super.viewDidLoad()
         tabBar.tintColor = UIColor.black
         tabBar.barTintColor = UIColor.white
-        self.addController(childVC: HomeViewController(), childTitle: "首页", imageName: "tabbar_1", selectImageName: "tabbar_select_1")
+        self.addController(childVC: HomeViewController(), childTitle: "笑话", imageName: "tabbar_1", selectImageName: "tabbar_select_1")
 
         self.addController(childVC: CenterLeftViewController(), childTitle: "视频", imageName: "tabbar_2", selectImageName: "tabbar_select_2")
 

@@ -1,4 +1,4 @@
-module PKHUD {
+framework module PKHUD {
   umbrella header "PKHUD-umbrella.h"
 
   export *

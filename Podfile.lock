@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.8.2)
   - Kingfisher (4.10.1)
+  - MJRefresh (3.1.16)
   - Moya (13.0.0):
     - Moya/Core (= 13.0.0)
   - Moya/Core (13.0.0):
@@ -17,6 +18,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
   - Kingfisher (~> 4.10.1)
+  - MJRefresh (~> 3.1.16)
   - Moya (~> 13.0.0)
   - Moya/RxSwift
   - PKHUD (~> 5.2.1)
@@ -26,6 +28,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Kingfisher
+    - MJRefresh
     - Moya
     - PKHUD
     - Result
@@ -35,12 +38,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
   Moya: 161263550064ff8a4948e8ff63137fd72a876292
   PKHUD: 4e6162c4c39ac367c6934e9855c6b4762ee16256
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: 95735365ee7ce6ef690b9225193148e5d1b4bd3f
+PODFILE CHECKSUM: 07b77ce6d88ec17aecf3af1ca5e117b7e11b0945
 
 COCOAPODS: 1.6.1

@@ -28,4 +28,5 @@ pod 'Kingfisher', '~>4.10.1' #图像
 pod 'PKHUD', '~> 5.2.1' #hud
 use_frameworks!
 pod 'MJRefresh', '~> 3.1.16'
+pod 'RealmSwift', '~> 3.14.1'
 end

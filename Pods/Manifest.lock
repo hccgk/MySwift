@@ -11,6 +11,11 @@ PODS:
     - Moya/Core
     - RxSwift (~> 4.0)
   - PKHUD (5.2.1)
+  - Realm (3.14.1):
+    - Realm/Headers (= 3.14.1)
+  - Realm/Headers (3.14.1)
+  - RealmSwift (3.14.1):
+    - Realm (= 3.14.1)
   - Result (4.1.0)
   - RxSwift (4.5.0)
   - SnapKit (4.2.0)
@@ -22,6 +27,7 @@ DEPENDENCIES:
   - Moya (~> 13.0.0)
   - Moya/RxSwift
   - PKHUD (~> 5.2.1)
+  - RealmSwift (~> 3.14.1)
   - SnapKit (~> 4.2.0)
 
 SPEC REPOS:
@@ -31,6 +37,8 @@ SPEC REPOS:
     - MJRefresh
     - Moya
     - PKHUD
+    - Realm
+    - RealmSwift
     - Result
     - RxSwift
     - SnapKit
@@ -41,10 +49,12 @@ SPEC CHECKSUMS:
   MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
   Moya: 161263550064ff8a4948e8ff63137fd72a876292
   PKHUD: 4e6162c4c39ac367c6934e9855c6b4762ee16256
+  Realm: e12c9c2387d05c5bba3a9c394838f5870e85763b
+  RealmSwift: a82eab9b04c3e1616082c7e17aa300740847769c
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: 07b77ce6d88ec17aecf3af1ca5e117b7e11b0945
+PODFILE CHECKSUM: 893bbacd8b39a4ea3426c6833b2792c5db14d8f3
 
 COCOAPODS: 1.6.1

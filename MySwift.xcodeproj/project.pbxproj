@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E4AA9D1229537BB00F92DDC /* BtnCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4AA9D0229537BB00F92DDC /* BtnCollectionViewCell.swift */; };
+		0E4AA9D62295644E00F92DDC /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4AA9D52295644E00F92DDC /* LocationModel.swift */; };
 		0E64D4D722840A550033AA16 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64D4D622840A550033AA16 /* Extensions.swift */; };
 		0E64D4E02284122C0033AA16 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64D4DF2284122C0033AA16 /* HomeViewModel.swift */; };
 		0E71D0602252C97A008C24B9 /* HomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71D05F2252C97A008C24B9 /* HomeTableCell.swift */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E4AA9D0229537BB00F92DDC /* BtnCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnCollectionViewCell.swift; sourceTree = "<group>"; };
+		0E4AA9D52295644E00F92DDC /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		0E64D4D622840A550033AA16 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0E64D4DF2284122C0033AA16 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		0E71D05F2252C97A008C24B9 /* HomeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableCell.swift; sourceTree = "<group>"; };
@@ -101,6 +105,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E4AA9CF2295374200F92DDC /* V */ = {
+			isa = PBXGroup;
+			children = (
+				0E4AA9D0229537BB00F92DDC /* BtnCollectionViewCell.swift */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		0E4AA9D42295609C00F92DDC /* M */ = {
+			isa = PBXGroup;
+			children = (
+				0E4AA9D52295644E00F92DDC /* LocationModel.swift */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
 		0E64D4D32284078F0033AA16 /* Comons */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +253,8 @@
 			children = (
 				0EE409B1224DAD7D0057012A /* CenterRightViewController.swift */,
 				0EE409B3224DC2E90057012A /* NextViewController.swift */,
+				0E4AA9D42295609C00F92DDC /* M */,
+				0E4AA9CF2295374200F92DDC /* V */,
 			);
 			path = CenterRight;
 			sourceTree = "<group>";
@@ -413,6 +435,8 @@
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -426,6 +450,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -469,6 +495,7 @@
 				0EE409AA224DAD320057012A /* TabbarController.swift in Sources */,
 				0EE409AC224DAD5A0057012A /* MeViewController.swift in Sources */,
 				0EE409B2224DAD7D0057012A /* CenterRightViewController.swift in Sources */,
+				0E4AA9D1229537BB00F92DDC /* BtnCollectionViewCell.swift in Sources */,
 				0EE409B0224DAD730057012A /* CenterLeftViewController.swift in Sources */,
 				0EE40973224DA8A10057012A /* AppDelegate.swift in Sources */,
 				0E64D4E02284122C0033AA16 /* HomeViewModel.swift in Sources */,
@@ -476,6 +503,7 @@
 				0EE409B7224DCC030057012A /* pchconfigfile.swift in Sources */,
 				0E64D4D722840A550033AA16 /* Extensions.swift in Sources */,
 				0EE64691228EAE3C000E5604 /* danceView.swift in Sources */,
+				0E4AA9D62295644E00F92DDC /* LocationModel.swift in Sources */,
 				0E71D0602252C97A008C24B9 /* HomeTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import RealmSwift
 
-class LocationModel: NSObject {
+class LocationModel: Object {
     @objc dynamic var speed = 0.00
     @objc  dynamic var longitude = 0.00 //经度
-   @objc dynamic var latitude = 0.00 //维度
-   @objc dynamic var timestamp = Date() //时间
+    @objc dynamic var latitude = 0.00 //维度
+    @objc dynamic var timestamp = Date() //时间
     
-    override init() {
-        super.init()
-    }
+//    override init() {
+//        super.init()
+//    }
 }
+

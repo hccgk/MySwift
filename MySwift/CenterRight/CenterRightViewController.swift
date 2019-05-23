@@ -181,7 +181,20 @@ extension CenterRightViewController:CLLocationManagerDelegate{
         if locations.count > 0 {
             let locationInfo = locations.last!
             // 存储到realm db
-//            locationInfo.speed
+            let realm = try! Realm()
+            
+//            let items = realm.objects(LocationModel.self)
+
+            let model = LocationModel()
+            model.speed = locationInfo.speed
+            model.latitude = locationInfo.coordinate.latitude
+            model.longitude = locationInfo.coordinate.longitude
+            model.timestamp = locationInfo.timestamp
+            
+            try! realm.write {
+                realm.add(model)
+            }
+            print(realm.configuration.fileURL!)
         }
     }
 }

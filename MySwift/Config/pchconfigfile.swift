@@ -8,6 +8,7 @@
 
 //import Foundation
 import UIKit
+
 //屏幕宽高
 let appWidth = UIScreen.main.bounds.width
 let appHeight =  UIScreen.main.bounds.height

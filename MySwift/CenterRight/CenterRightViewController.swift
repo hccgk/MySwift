@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 import CoreLocation
 import RealmSwift
+import PKHUD
 
 class CenterRightViewController: UIViewController {
     
@@ -118,10 +119,19 @@ extension CenterRightViewController:UICollectionViewDataSource,UICollectionViewD
     private func startLocation(){
         locationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.distanceFilter = 2
+        locationManager.distanceFilter = 5
         
-        if #available(iOS 8.0, *) {
+        if #available(iOS 9.0, *) {
             locationManager.requestAlwaysAuthorization()
+            locationManager.allowsBackgroundLocationUpdates = true //后台定位开启
+            locationManager.pausesLocationUpdatesAutomatically = false //系统不能关闭定位
+            let label = UILabel.init()
+            label.text = "定位开始"
+            label.sizeToFit()
+            PKHUD.sharedHUD.contentView = label
+            PKHUD.sharedHUD.show()
+            PKHUD.sharedHUD.hide(afterDelay: 1.6)
+
         }
         locationManager.delegate = self
         if CLLocationManager.locationServicesEnabled() {
@@ -133,7 +143,20 @@ extension CenterRightViewController:UICollectionViewDataSource,UICollectionViewD
     }
     ///结束定位与后台的运行
     private func stopLocation(){
-        
+        guard  locationManager != nil else {
+            return
+        }
+       
+            locationManager.stopUpdatingLocation()
+            locationManager.pausesLocationUpdatesAutomatically = true
+            let label = UILabel.init()
+            label.text = "停止定位"
+            label.sizeToFit()
+            PKHUD.sharedHUD.contentView = label
+            PKHUD.sharedHUD.show()
+            PKHUD.sharedHUD.hide(afterDelay: 1.6)
+
+      
     }
     ///速度显示
     private func speedShow(){
@@ -182,9 +205,7 @@ extension CenterRightViewController:CLLocationManagerDelegate{
             let locationInfo = locations.last!
             // 存储到realm db
             let realm = try! Realm()
-            
-//            let items = realm.objects(LocationModel.self)
-
+        
             let model = LocationModel()
             model.speed = locationInfo.speed
             model.latitude = locationInfo.coordinate.latitude
@@ -197,4 +218,5 @@ extension CenterRightViewController:CLLocationManagerDelegate{
             print(realm.configuration.fileURL!)
         }
     }
+
 }

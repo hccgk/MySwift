@@ -16,7 +16,7 @@ class CenterRightViewController: UIViewController {
     
     let BtnCollectionViewCellInder = "BtnCollectionViewCell"
     var mCollectionView: UICollectionView?
-    let mDataArr = ["定位开启","结束运行定位","展示速度数据","坐标信息图","跳转界面","分享"]  //不维护按钮状态,只弹框显示结果
+    let mDataArr = ["定位开启","结束运行定位","展示速度数据","坐标信息图","跳转界面","分享","测试clloction"]  //不维护按钮状态,只弹框显示结果
     var locationManager:CLLocationManager!
 
 
@@ -108,13 +108,19 @@ extension CenterRightViewController:UICollectionViewDataSource,UICollectionViewD
             jumpTodo()
         case 5:
             shareToSys()
+        case 6:
+            demoForClocction()
         default:
             nothing()
         }
     }
     
     //MARK: - Actions
-    
+    ///clocction
+    func demoForClocction()  {
+        let vc : clocctionDemoViewController = clocctionDemoViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     ///开启定位
     private func startLocation(){
         locationManager = CLLocationManager()

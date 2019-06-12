@@ -51,6 +51,7 @@ class HomeModel: NSObject {
             result = mutarr
             return
         }
+        super.setValue(value, forKey: key)
     }
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
         print("UndefinedKey \(key) \(value.debugDescription)")

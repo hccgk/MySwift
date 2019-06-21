@@ -9,8 +9,8 @@
 import UIKit
 
 let cardDemoCollectionViewCellInd = "cardDemoCollectionViewCell"
-let itemW = (appWidth-34*2)
-let left:CGFloat = Spacing + bandage
+let itemW = (appWidth-34*2) //卡片宽度
+let left:CGFloat = Spacing + bandage //左侧 元素间隙Spacing 显示另一个卡片间距 bandage
 let bandage:CGFloat = 14
 let Spacing:CGFloat = 20.0
 class clocctionDemoViewController: UIViewController {
@@ -20,7 +20,7 @@ class clocctionDemoViewController: UIViewController {
         layout.itemSize = CGSize(width: itemW, height: 411)
         layout.minimumLineSpacing = Spacing
 //        layout.minimumInteritemSpacing = 34
-        layout.sectionInset = UIEdgeInsets.init(top: 0, left: left, bottom: 0, right: 34)
+        layout.sectionInset = UIEdgeInsets.init(top: 0, left: left, bottom: 0, right: left)
         layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
         
         let viewe =  UICollectionView.init(frame: CGRect.init(x: 0, y: 72 + appnavHeight, width: appWidth, height: 411+30), collectionViewLayout: layout)

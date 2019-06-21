@@ -12,6 +12,7 @@
 		0E64D4D722840A550033AA16 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64D4D622840A550033AA16 /* Extensions.swift */; };
 		0E64D4E02284122C0033AA16 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64D4DF2284122C0033AA16 /* HomeViewModel.swift */; };
 		0E71D0602252C97A008C24B9 /* HomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71D05F2252C97A008C24B9 /* HomeTableCell.swift */; };
+		0E7EE17622BCC8C4007A6B8C /* DamimiUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7EE17522BCC8C4007A6B8C /* DamimiUserModel.swift */; };
 		0E84CE6D228D44EF009AC7CB /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84CE6C228D44EF009AC7CB /* HomeModel.swift */; };
 		0EDBCCFF22A908ED005DF380 /* clocctionDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDBCCFE22A908ED005DF380 /* clocctionDemoViewController.swift */; };
 		0EDBCD0122A90B87005DF380 /* cardDemoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDBCD0022A90B87005DF380 /* cardDemoCollectionViewCell.swift */; };
@@ -57,6 +58,8 @@
 		0E64D4D622840A550033AA16 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0E64D4DF2284122C0033AA16 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		0E71D05F2252C97A008C24B9 /* HomeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableCell.swift; sourceTree = "<group>"; };
+		0E7EE17322BCBD39007A6B8C /* headerPch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerPch.swift; sourceTree = "<group>"; };
+		0E7EE17522BCC8C4007A6B8C /* DamimiUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamimiUserModel.swift; sourceTree = "<group>"; };
 		0E84CE6C228D44EF009AC7CB /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		0EDBCCFE22A908ED005DF380 /* clocctionDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clocctionDemoViewController.swift; sourceTree = "<group>"; };
 		0EDBCD0022A90B87005DF380 /* cardDemoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardDemoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -134,6 +137,7 @@
 			children = (
 				0E64D4D622840A550033AA16 /* Extensions.swift */,
 				0EE64690228EAE3C000E5604 /* danceView.swift */,
+				0E7EE17322BCBD39007A6B8C /* headerPch.swift */,
 			);
 			path = Comons;
 			sourceTree = "<group>";
@@ -168,6 +172,14 @@
 				0E71D05F2252C97A008C24B9 /* HomeTableCell.swift */,
 			);
 			path = V;
+			sourceTree = "<group>";
+		};
+		0E7EE17422BCC8AF007A6B8C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E7EE17522BCC8C4007A6B8C /* DamimiUserModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		0EDBCCFD22A908C8005DF380 /* cardView */ = {
@@ -244,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				0EE409AB224DAD5A0057012A /* MeViewController.swift */,
+				0E7EE17422BCC8AF007A6B8C /* Model */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -465,6 +478,7 @@
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -480,6 +494,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -524,6 +539,7 @@
 				0EE409B2224DAD7D0057012A /* CenterRightViewController.swift in Sources */,
 				0E4AA9D1229537BB00F92DDC /* BtnCollectionViewCell.swift in Sources */,
 				0EDBCD0322AF479A005DF380 /* CardFlowLayout.swift in Sources */,
+				0E7EE17622BCC8C4007A6B8C /* DamimiUserModel.swift in Sources */,
 				0EE409B0224DAD730057012A /* CenterLeftViewController.swift in Sources */,
 				0EE40973224DA8A10057012A /* AppDelegate.swift in Sources */,
 				0E64D4E02284122C0033AA16 /* HomeViewModel.swift in Sources */,
@@ -719,6 +735,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hechuan.org.cn.MySwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MySwift/Comons/headerPch.swift";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Pods";
@@ -740,6 +757,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hechuan.org.cn.MySwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MySwift/Comons/headerPch.swift";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Pods";

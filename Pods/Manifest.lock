@@ -19,6 +19,7 @@ PODS:
   - Result (4.1.0)
   - RxSwift (4.5.0)
   - SnapKit (4.2.0)
+  - Toaster (2.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
@@ -29,6 +30,7 @@ DEPENDENCIES:
   - PKHUD (~> 5.2.1)
   - RealmSwift (~> 3.14.1)
   - SnapKit (~> 4.2.0)
+  - Toaster
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -42,6 +44,7 @@ SPEC REPOS:
     - Result
     - RxSwift
     - SnapKit
+    - Toaster
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -54,7 +57,8 @@ SPEC CHECKSUMS:
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  Toaster: c1a81b376edcc2470157b4d1ee1e9341d3b96455
 
-PODFILE CHECKSUM: 893bbacd8b39a4ea3426c6833b2792c5db14d8f3
+PODFILE CHECKSUM: 7a28bb65b6d0949a6860d13e59a921621f63a471
 
 COCOAPODS: 1.6.1

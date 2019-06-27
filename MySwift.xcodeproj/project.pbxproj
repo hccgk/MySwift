@@ -14,6 +14,7 @@
 		0E71D0602252C97A008C24B9 /* HomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71D05F2252C97A008C24B9 /* HomeTableCell.swift */; };
 		0E7EE17622BCC8C4007A6B8C /* DamimiUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7EE17522BCC8C4007A6B8C /* DamimiUserModel.swift */; };
 		0E84CE6D228D44EF009AC7CB /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84CE6C228D44EF009AC7CB /* HomeModel.swift */; };
+		0EB8BDA222C38BCC00F49D04 /* TaobaoUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8BDA122C38BCC00F49D04 /* TaobaoUserModel.swift */; };
 		0EDBCCFF22A908ED005DF380 /* clocctionDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDBCCFE22A908ED005DF380 /* clocctionDemoViewController.swift */; };
 		0EDBCD0122A90B87005DF380 /* cardDemoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDBCD0022A90B87005DF380 /* cardDemoCollectionViewCell.swift */; };
 		0EDBCD0322AF479A005DF380 /* CardFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDBCD0222AF479A005DF380 /* CardFlowLayout.swift */; };
@@ -61,6 +62,7 @@
 		0E7EE17322BCBD39007A6B8C /* headerPch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerPch.swift; sourceTree = "<group>"; };
 		0E7EE17522BCC8C4007A6B8C /* DamimiUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamimiUserModel.swift; sourceTree = "<group>"; };
 		0E84CE6C228D44EF009AC7CB /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		0EB8BDA122C38BCC00F49D04 /* TaobaoUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaobaoUserModel.swift; sourceTree = "<group>"; };
 		0EDBCCFE22A908ED005DF380 /* clocctionDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clocctionDemoViewController.swift; sourceTree = "<group>"; };
 		0EDBCD0022A90B87005DF380 /* cardDemoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardDemoCollectionViewCell.swift; sourceTree = "<group>"; };
 		0EDBCD0222AF479A005DF380 /* CardFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlowLayout.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				0E7EE17522BCC8C4007A6B8C /* DamimiUserModel.swift */,
+				0EB8BDA122C38BCC00F49D04 /* TaobaoUserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				0E4AA9D1229537BB00F92DDC /* BtnCollectionViewCell.swift in Sources */,
 				0EDBCD0322AF479A005DF380 /* CardFlowLayout.swift in Sources */,
 				0E7EE17622BCC8C4007A6B8C /* DamimiUserModel.swift in Sources */,
+				0EB8BDA222C38BCC00F49D04 /* TaobaoUserModel.swift in Sources */,
 				0EE409B0224DAD730057012A /* CenterLeftViewController.swift in Sources */,
 				0EE40973224DA8A10057012A /* AppDelegate.swift in Sources */,
 				0E64D4E02284122C0033AA16 /* HomeViewModel.swift in Sources */,

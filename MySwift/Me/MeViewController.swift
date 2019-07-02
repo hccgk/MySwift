@@ -32,7 +32,6 @@ class MeViewController: UIViewController {
 
     func setupUI() {
         self.view.backgroundColor = self.tableview.backgroundColor
-        print(self.view.backgroundColor)//efeff4系统tableview默认颜色
         self.view.addSubview(self.tableview)
         self.tableview.delegate = self
         self.tableview.dataSource = self
@@ -40,7 +39,7 @@ class MeViewController: UIViewController {
     
     func setupData() {
         
-        self.dataArray = ["登录","查号","遍历详细结果"]
+        self.dataArray = ["跳转控制器"]
         self.tableview.reloadData()
     }
    
@@ -72,15 +71,22 @@ extension MeViewController {
     func actionWithIndex(index:Int) {
         switch index {
         case 0:
-            loginAction()
-        case 1:
-            lookId()
-        case 2:
-            lookaround()
+            turnto()
+
+//            lookId()
+//        case 1:
+//            lookaround()
+//        case 2:
+//            turnto()
         default:
           print(index.description)
             
         }
+    }
+    func turnto(){
+        let vc = TaobaoUserVC()
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     func  lookaround(){
         let urllogin = URL.init(string: "http://damimi.dianshangbaike.com/NetflowMission/getWwList")!
@@ -98,8 +104,8 @@ extension MeViewController {
                         if let existence = dict["msg"] {
                             let rea = try! Realm()
                             try! rea.write {
+                                //对应field的写入
                                 modeltaobao.setValue((existence as! String), forKeyPath: "msg")
-
                                 }
                             }
 
@@ -165,7 +171,6 @@ extension MeViewController {
                     try! realm.write {
                         realm.add(modelObject!, update: true)
                     }
-                    print(NSHomeDirectory())
                 }
             case .failure(_):
                 let toast = Toast(text: "fail")
@@ -175,64 +180,7 @@ extension MeViewController {
             
         }
     }
-    /*
-     .responseJSON { (data) in
-     
-     switch data.result{
-     case .success(let json):
-     let resdict = json as! Dictionary<String,Any>
-     print(resdict)
-     let object = resdict["res"]
-     let arrdict = object as? Array<Any>
-     for item in arrdict ?? [] {
-     let jsonDecoder = JSONDecoder()
-     let modelObject = try? jsonDecoder.decode(TaobaoUserModel.self, from: data)
-     self.userarrays?.append(modelObject!)
-     }
-     print(self.userarrays)
-     case .failure(_):
-     let toast = Toast(text: "fail")
-     toast.show()
-     }
-     
-     
-     }
-     */
-    func loginAction(){
-        //http://damimi.dianshangbaike.com/LoginUI/doLogin
-        //userName=ByteAndBit&password=521125&remember=false
-        let urllogin = URL.init(string: "http://damimi.dianshangbaike.com/LoginUI/doLogin")!
-        Alamofire.request(urllogin, method: .post, parameters: ["userName":"111","password":"1111","remember":"false"], encoding: URLEncoding.default, headers: nil).responseJSON { (data) in
-            switch data.result {
-            case .success(let json ):
-               
-                let dict = json as! Dictionary<String,Any>
-                
-                let model = DamimiUserModel.init(dict: dict)
-                
-                let realm = try! Realm()
-                let dmodel = DamimiItem()
-                dmodel.userId = model.res?.userId ?? 0
-                dmodel.idhexString = model.res?.idString
-                dmodel.created = model.res?.created ?? 0
-                dmodel.expiredAt = model.res?.expiredAt ?? 0
-               
-                try! realm.write {
-                    realm.add(dmodel)
-
-                }
-                let toast = Toast(text: "登录成功")
-                toast.show()
-
-            case .failure(_):
-                let toast = Toast(text: "失败")
-                toast.show()
-            }
-            
-
-            
-        }
-    }
+   
 }
 //MARK: - 当前支持的接口
 //http://damimi.dianshangbaike.com/NetflowMission/getWxList?page=1&limit=10

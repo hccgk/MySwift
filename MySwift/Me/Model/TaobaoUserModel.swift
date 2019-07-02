@@ -60,7 +60,8 @@ class RealmTaobaoUserTable: Object , Codable{
     @objc dynamic var wwCreated  = 0
     @objc dynamic var wwcreatedStr : String?
     
-  
+    @objc dynamic var howsSearched : String?
+
    
 }
 

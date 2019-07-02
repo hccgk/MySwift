@@ -78,9 +78,15 @@ class DamimiUser: NSObject {
 }
 
 class DamimiItem: Object {
+    @objc dynamic var userId = 0
+    @objc dynamic var userName : String?
+    @objc dynamic var pass : String?
     @objc dynamic var created  = 0
     @objc dynamic var expiredAt = 0
-    @objc dynamic var userId = 0
     @objc dynamic var idhexString: String?
-    
+    @objc dynamic var haveTimes = 50
+
+    override class func primaryKey() -> String? {
+        return "userName"
+    }
 }

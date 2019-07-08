@@ -25,6 +25,10 @@ class TaobaoUserVC: UIViewController {
     func loadData(){
         // 读取
     }
+    @objc func hidhud()  {
+        PKHUD.sharedHUD.hide()
+
+    }
     func setupUI() {
         //1.信息view
         infoTextView = UITextView()
@@ -87,6 +91,12 @@ class TaobaoUserVC: UIViewController {
         daview.viewtype = "tb"
         daview.tbselectdelegate = self
         PKHUD.sharedHUD.show()
+        let btn = UIButton.init(type: .custom)
+        daview.addSubview(btn)
+        btn.frame = CGRect.init(x: daview.bounds.size.width - 40, y: 0, width: 40, height: 40)
+        btn.setTitle("关", for: .normal)
+        btn.setTitleColor(UIColor.black, for: .normal)
+        btn.addTarget(self, action: #selector(hidhud), for: .touchUpInside)
     }
     
     //MARK: - ///查号主方法
@@ -247,7 +257,12 @@ class TaobaoUserVC: UIViewController {
         daview.viewtype = "mm"
         daview.selectdelegate = self
         PKHUD.sharedHUD.show()
-        
+        let btn = UIButton.init(type: .custom)
+        daview.addSubview(btn)
+        btn.frame = CGRect.init(x: daview.bounds.size.width - 40, y: 0, width: 40, height: 40)
+        btn.setTitle("关", for: .normal)
+        btn.setTitleColor(UIColor.black, for: .normal)
+        btn.addTarget(self, action: #selector(hidhud), for: .touchUpInside)
     }
     ///登录操作
     func loginPopView()  {

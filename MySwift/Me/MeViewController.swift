@@ -39,7 +39,7 @@ class MeViewController: UIViewController {
     
     func setupData() {
         
-        self.dataArray = ["跳转控制器"]
+        self.dataArray = ["大咪咪查号"]
         self.tableview.reloadData()
     }
    
@@ -162,9 +162,7 @@ extension MeViewController {
                     let jsonDecoder = JSONDecoder()
 //                    let modelObject = try? jsonDecoder.decode(TaobaoUserModel.self, from: jdata ?? Data.init())
                     let modelObject = try? jsonDecoder.decode(RealmTaobaoUserTable.self, from: jdata ?? Data.init())
-
 //                    self.userarrays?.append(modelObject!)
-                    
                     let realm = try! Realm()
                     
 

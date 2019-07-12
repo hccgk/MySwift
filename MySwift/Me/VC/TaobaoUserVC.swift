@@ -96,6 +96,7 @@ class TaobaoUserVC: UIViewController {
         btn.frame = CGRect.init(x: daview.bounds.size.width - 40, y: 0, width: 40, height: 40)
         btn.setTitle("关", for: .normal)
         btn.setTitleColor(UIColor.black, for: .normal)
+        btn.backgroundColor = UIColor.white
         btn.addTarget(self, action: #selector(hidhud), for: .touchUpInside)
     }
     
@@ -262,6 +263,7 @@ class TaobaoUserVC: UIViewController {
         btn.frame = CGRect.init(x: daview.bounds.size.width - 40, y: 0, width: 40, height: 40)
         btn.setTitle("关", for: .normal)
         btn.setTitleColor(UIColor.black, for: .normal)
+        btn.backgroundColor = UIColor.white
         btn.addTarget(self, action: #selector(hidhud), for: .touchUpInside)
     }
     ///登录操作
